@@ -1,0 +1,7 @@
+00000000:  f00002b7   lui t0, 983040               # L5: li   t0, 0xF0000000        # t0 = alamat layar TTY
+00000004:  00028293   addi t0, t0, 0               # L5: li   t0, 0xF0000000        # t0 = alamat layar TTY
+00000008:  04800313   addi t1, x0, 72              # L7: li   t1, 72                # 72 dalam ASCII = 'H'
+0000000c:  00628023   sb t1, 0(t0)                 # L8: sb   t1, 0(t0)             # Kirim 'H' ke layar TTY
+00000010:  04900313   addi t1, x0, 73              # L10: li   t1, 73                # 73 dalam ASCII = 'I'
+00000014:  00628023   sb t1, 0(t0)                 # L11: sb   t1, 0(t0)             # Kirim 'I' ke layar TTY
+00000018:  00100073   ebreak                       # L13: ebreak                     # Hentikan CPU
